@@ -31,6 +31,9 @@
         <li><a href="advertising.html" class="active">Advertising</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="schedule.html">Schedule</a></li>
+        <!-- New links for login and register pages -->
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
     </ul>
 </nav>
 
@@ -58,14 +61,33 @@
     <h3 class="section-title">Success Stories</h3>
     <p class="section-description">Explore some of our past advertising partnerships and see how we helped brands achieve their marketing goals.</p>
     <ul>
-        <li>Brand X increased customer engagement by 40% through targeted ads.</li>
-        <li>Company Y saw a 50% increase in online traffic after running a podcast ad campaign.</li>
+        <li><strong>Brand X</strong> increased customer engagement by 40% through targeted ads.</li>
+        <li><strong>Company Y</strong> saw a 50% increase in online traffic after running a podcast ad campaign.</li>
     </ul>
 
     <h3 class="section-title">Get in Touch</h3>
     <p class="section-description">Ready to get started? Contact us now to learn more about our advertising options and find the perfect package for your brand!</p>
+    
+    <!-- Advertising Inquiry Form -->
+    <form action="advertising-form.php" method="POST" class="advertising-form">
+        <label for="companyName">Company Name:</label>
+        <input type="text" name="companyName" id="companyName" placeholder="Your Company Name" required>
 
-    <p><a href="contact.html" class="cta-button">Contact Us</a></p>
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" name="contactPerson" id="contactPerson" placeholder="Contact Person" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+
+        <label for="message">Your Inquiry:</label>
+        <textarea name="message" id="message" placeholder="Your Inquiry" required></textarea>
+
+        <button type="submit">Submit Inquiry</button>
+    </form>
+
 </section>
 
 <footer>

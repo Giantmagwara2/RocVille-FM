@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Global Styles */  
 * {
     margin: 0;
     padding: 0;
@@ -8,44 +8,66 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0; /* Lighter grey for a more neutral background */
+    background-color: #f0f0f0;
     color: #333;
-    font-size: 16px; /* Base font size for better responsiveness */
+    font-size: 16px;
 }
 
 /* Header */
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: linear-gradient(135deg, #1d3d6d, #EB3C7C); /* Adjusted gradient with deeper blue */
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 40px; /* Reduced padding for higher positioning */
+    background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Header Title - Animated & Edgy */
+header h1 {
+    font-size: 3.5em; /* Larger font size for more impact */
+    color: white;
+    font-family: 'Bangers', sans-serif; /* Edgy font */
+    flex-grow: 1;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Stronger 3D effect */
+    animation: slideIn 2s ease-out; /* Added animation */
+}
+
+/* Keyframe for Title Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header Logo */
 header .logo-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 20%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Adjusted margin for closer spacing */
 }
 
 header .logo-link img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-}
-
-/* Header Title */
-header h1 {
-    font-size: 2.5em;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    flex-grow: 1;
-    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation */
@@ -53,11 +75,11 @@ nav ul {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    background: linear-gradient(135deg, #1d3d6d, #EB3C7C); /* Adjusted gradient with deeper blue */
+    background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
     padding: 10px 0;
     border-radius: 10px;
     margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li {
@@ -76,24 +98,24 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #FFBBDF;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
 nav ul li a.active {
-    background-color: #FF5C8D; /* Stronger contrast for active state */
-    color: #333; /* More contrasting text for active state */
+    background-color: #FF5C8D;
+    color: #333;
 }
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #1d3d6d, #EB3C7C); /* Adjusted gradient with deeper blue */
+    background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
     color: white;
     padding: 60px 20px;
     text-align: center;
     border-radius: 10px;
     font-family: 'Lora', serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-section h1 {
@@ -105,7 +127,7 @@ nav ul li a.active {
 .section-title {
     font-size: 2.5em;
     font-weight: bold;
-    color: #333; /* Darker title color */
+    color: #333;
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -128,7 +150,7 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 0 auto;
-    border: 1px solid #ddd; /* Subtle border */
+    border: 1px solid #ddd;
 }
 
 form label {
@@ -165,12 +187,12 @@ form button:hover {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #1d3d6d, #EB3C7C); /* Adjusted gradient with deeper blue */
+    background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
     color: white;
     text-align: center;
     padding: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
@@ -185,9 +207,70 @@ footer a:hover {
     transition: color 0.3s ease;
 }
 
+/* Contact Details Section Update */
+.contact-details {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contact-details h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+table caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #EB3C7C;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+table td a {
+    color: #1d3d6d;
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
 /* New Feature Section */
 .new-feature {
-    background: linear-gradient(135deg, #1d3d6d, #EB3C7C); /* Adjusted gradient with deeper blue */
+    background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -212,7 +295,7 @@ footer a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd; /* Added border for structure */
+    border: 1px solid #ddd;
 }
 
 .feature-items article img {
@@ -245,75 +328,60 @@ footer a:hover {
 .feature-items article .button:hover {
     background-color: #FFBBDF;
 }
-
-/* Header Logo */
-header .logo-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    overflow: hidden; /* Ensures no part of the logo exceeds the container */
-    border-radius: 10px; /* Softens the edges */
-}
-
-header .logo-link img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px; /* Rounds the corners for a smooth blend */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a seamless transition into the background */
-}
-
-/* New section styles */
-.featured-show, .recent-blog, .fan-submissions, .event-countdown {
-    background-color: #fff;
+/* Form Container */
+form {
+    margin: 20px auto;
     padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 600px;
 }
 
-.featured-show .section-title, .recent-blog .section-title, .fan-submissions .section-title, .event-countdown .section-title {
-    font-size: 2em;
-    color: #EB3C7C;
-    margin-bottom: 10px;
+/* Form Fields */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
-.featured-show .show-content, .recent-blog .blog-posts {
-    display: flex;
-    gap: 20px;
+/* Invalid Field Styles */
+input:invalid, textarea:invalid, select:invalid {
+    border-color: red;
 }
 
-.featured-show .show-content img {
-    max-width: 200px;
-    border-radius: 10px;
-}
-
-.recent-blog .blog-posts article {
-    width: 45%;
-}
-
-.recent-blog .blog-posts a, .fan-submissions button, .event-countdown a {
-    background-color: #EB3C7C;
+/* Button Styles */
+button[type="submit"] {
+    background-color: #0056b3;
     color: white;
+    border: none;
     padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #00408f;
+}
+
+/* Success Message Styles */
+.success-message {
+    color: green;
+    font-size: 16px;
     margin-top: 10px;
 }
 
-.recent-blog .blog-posts a:hover, .fan-submissions button:hover, .event-countdown a:hover {
-    background-color: #FFBBDF;
-}
-
-.event-countdown {
-    text-align: center;
-}
-
-#countdown-timer {
-    font-size: 2em;
-    font-weight: bold;
-    color: #EB3C7C;
+/* Error Message Styles */
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
 }

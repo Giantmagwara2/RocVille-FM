@@ -56,7 +56,51 @@ document.addEventListener("DOMContentLoaded", function() {
             heroSection.style.transform = 'scale(1)';
         });
     }
+
+    // Form handling - validation and submission
+    const forms = document.querySelectorAll("form");
+
+    forms.forEach(form => {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting by default
+
+            let isValid = true;
+            const formInputs = form.querySelectorAll("input, textarea, select");
+
+            formInputs.forEach(input => {
+                if (input.required && !input.value.trim()) {
+                    input.style.borderColor = "red"; // Highlight invalid inputs
+                    isValid = false;
+                } else {
+                    input.style.borderColor = ""; // Remove any previous highlight
+                }
+            });
+
+            // Custom validation for email input
+            const emailInput = form.querySelector("input[type='email']");
+            if (emailInput && emailInput.required && !validateEmail(emailInput.value)) {
+                emailInput.style.borderColor = "red"; // Highlight invalid email
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Perform the form submission (this could be an AJAX request, or form action)
+                console.log("Form is valid! Submitting...");
+                form.reset(); // Reset form after submission
+                alert('Form submitted successfully!');
+            } else {
+                console.warn("Form is invalid!");
+            }
+        });
+    });
+
+    // Helper function to validate email format
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(String(email).toLowerCase());
+    }
 });
+
 // Countdown timer logic
 const eventDate = new Date('2025-02-15T00:00:00').getTime();
 const countdownElement = document.getElementById('countdown-timer');
@@ -78,3 +122,12 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+if (isValid) {
+    // Simulate form submission for now
+    document.getElementById('formFeedback').style.display = 'block';
+    document.getElementById('formFeedback').innerHTML = 'Thank you for your message! We will get back to you soon.';
+    form.reset(); // Reset form after submission
+} else {
+    document.getElementById('formFeedback').style.display = 'block';
+    document.getElementById('formFeedback').innerHTML = 'Please fill in all required fields correctly.';
+}
