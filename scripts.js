@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.warn(`Target element #${targetId} not found.`);
             }
         });
     });
@@ -44,9 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Interactive behavior for hero section (hover effect)
     const heroSection = document.querySelector('.hero-section');
     if (heroSection) {
+        heroSection.style.transition = 'transform 0.3s ease'; // Ensure transition is set up outside of event listeners
+
         heroSection.addEventListener('mouseenter', () => {
             heroSection.style.transform = 'scale(1.05)';
-            heroSection.style.transition = 'transform 0.3s ease';
         });
 
         heroSection.addEventListener('mouseleave', () => {
@@ -54,3 +57,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+// Countdown timer logic
+const eventDate = new Date('2025-02-15T00:00:00').getTime();
+const countdownElement = document.getElementById('countdown-timer');
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance < 0) {
+        countdownElement.innerHTML = "The event is live!";
+    } else {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+}
+
+setInterval(updateCountdown, 1000);
