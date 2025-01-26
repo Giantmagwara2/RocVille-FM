@@ -12,190 +12,6 @@
     <script defer src="scripts.js"></script>
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background: linear-gradient(135deg, #D5C5CF, #EB3C7C);
-            border-radius: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        header .logo-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 20%; /* Adjusted for better alignment */
-        }
-
-        header .logo-link img {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        /* Header Title */
-        header h1 {
-            font-size: 2.5em;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            flex-grow: 1;
-        }
-
-        /* Navigation */
-        nav ul {
-            display: flex;
-            list-style-type: none;
-            justify-content: center;
-            background: linear-gradient(135deg, #D5C5CF, #EB3C7C);
-            padding: 10px 0;
-            border-radius: 10px;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            font-size: 16px;
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #FFBBDF;
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        nav ul li a.active {
-            background-color: #FFBBDF;
-            color: #D5C5CF;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #D5C5CF, #EB3C7C);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 10px;
-            font-family: 'Lora', serif;
-        }
-
-        .hero-section h1 {
-            font-size: 3em;
-            font-weight: bold;
-        }
-
-        /* Section Titles and Descriptions */
-        .section-title {
-            font-size: 2em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .section-description {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        /* Form Styling */
-        form {
-            display: flex;
-            flex-direction: column;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        form label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        form input,
-        form textarea,
-        form select {
-            margin-bottom: 15px;
-            padding: 12px 15px;
-            font-size: 1em;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
-
-        form button {
-            background-color: #EB3C7C;
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-size: 1em;
-        }
-
-        form button:hover {
-            background-color: #FFBBDF;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #D5C5CF, #EB3C7C);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            border-radius: 10px;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-            color: #FFBBDF;
-            transition: color 0.3s ease;
-        }
-
-        /* Add Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;500&family=Roboto:wght@400;500&display=swap');
-    </style>
 </head>
 <body>
 
@@ -237,92 +53,98 @@
     <div class="audio-player">
         <audio controls>
             <source src="stream-url.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
+            <!-- Add actual streaming URL -->
         </audio>
     </div>
 </section>
 
-<!-- Show Schedule Section -->
-<section class="show-schedule">
-    <h3 class="section-title">Today's Schedule</h3>
-    <ul>
-        <li><strong>06:00 - 09:00:</strong> Morning Vibes with DJ Mike</li>
-        <li><strong>09:00 - 12:00:</strong> Mid-Morning Melodies with Sarah K</li>
-        <li><strong>12:00 - 15:00:</strong> Afternoon Groove with DJ Alex</li>
-        <li><strong>15:00 - 18:00:</strong> Drive Time Hits with Lisa M</li>
-        <li><strong>18:00 - 21:00:</strong> Evening Chill with DJ Sam</li>
-    </ul>
-</section>
-
-<!-- Trending Now Section -->
-<section class="trending-now">
-    <h3 class="section-title">Trending Now</h3>
-    <div class="trending-items">
-        <article>
-            <img src="images/trending1.jpg" alt="Trending Item 1">
-            <h4>Top 10 Hits of the Week</h4>
-            <p>Check out the latest music charts and the hottest songs this week!</p>
-            <a href="#" class="button">Read More</a>
-        </article>
-        <article>
-            <img src="images/trending2.jpg" alt="Trending Item 2">
-            <h4>Featured Artist: Jane Doe</h4>
-            <p>Discover the story behind the artist dominating the charts.</p>
-            <a href="#" class="button">Read More</a>
-        </article>
+<!-- Follow Us on Social Media -->
+<section class="social-media">
+    <h3 class="section-title">Follow Us on Social Media</h3>
+    <p class="section-description">Stay updated with the latest news and shows from RocVille FM!</p>
+    <div class="social-icons">
+        <a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter-square"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram-square"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-youtube-square"></i></a>
     </div>
 </section>
 
-<!-- Music Charts Section -->
-<section class="music-charts">
-    <h3 class="section-title">Music Charts</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Song</th>
-                <th>Artist</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Hit Song 1</td>
-                <td>Artist A</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Hit Song 2</td>
-                <td>Artist B</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Hit Song 3</td>
-                <td>Artist C</td>
-            </tr>
-        </tbody>
-    </table>
+<!-- Featured Shows -->
+<section class="featured-shows">
+    <h3 class="section-title">Featured Shows</h3>
+    <div class="show-cards">
+        <div class="show-card">
+            <h4>Morning Vibes</h4>
+            <p>Start your day with uplifting music and inspiring stories.</p>
+        </div>
+        <div class="show-card">
+            <h4>Evening Grooves</h4>
+            <p>Relax with smooth tracks and late-night talk shows.</p>
+        </div>
+        <div class="show-card">
+            <h4>Weekend Special</h4>
+            <p>Catch exclusive interviews and top hits every weekend!</p>
+        </div>
+    </div>
 </section>
 
-<!-- Newsletter Subscription -->
-<section class="newsletter">
-    <h3 class="section-title">Stay Updated</h3>
-    <p class="section-description">Subscribe to our newsletter and never miss an update!</p>
-    <form>
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-    </form>
-</section>
-
-<!-- Social Media Links -->
 <footer>
-    <div class="social-media">
-        <h3>Follow Us</h3>
-        <a href="https://facebook.com/RocVilleFM" class="facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/RocVilleFM" class="twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/RocVilleFM" class="instagram"><i class="fab fa-instagram"></i></a>
-    </div>
+    <p>&copy; 2025 RocVille FM. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
 </footer>
+
+<style>
+    /* Social Media Section */
+    .social-media .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .social-link {
+        color: #0099FF;
+        font-size: 2em;
+        transition: transform 0.3s ease;
+    }
+
+    .social-link:hover {
+        transform: scale(1.2);
+        color: #EB3C7C;
+    }
+
+    /* Featured Shows Section */
+    .featured-shows {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+
+    .show-cards {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .show-card {
+        background-color: #0099FF;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        flex: 1;
+    }
+
+    .show-card h4 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .show-card p {
+        font-size: 1em;
+    }
+</style>
 
 </body>
 </html>
