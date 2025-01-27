@@ -10,6 +10,237 @@
     <title>RocVille FM - Contact</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 1.5em;
+            color: white;
+            font-family: 'Bangers', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            animation: slideIn 2s ease-out;
+            margin-top: 0;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        header .logo-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        header .logo-link img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
+            padding: 10px 0;
+            border-radius: 10px;
+            margin: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #FFBBDF;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        nav ul li a.active {
+            background-color: #FF5C8D;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-family: 'Lora', serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Section Titles and Descriptions */
+        .section-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .section-description {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            margin-bottom: 10px;
+            padding: 8px 10px;
+            font-size: 1em;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        form button {
+            background-color: #EB3C7C;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #FFBBDF;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #FFBBDF;
+            transition: color 0.3s ease;
+        }
+
+        /* Contact Details Section */
+        .contact-details {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .contact-details-table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        .contact-details-table th, .contact-details-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .contact-details-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
 
@@ -45,64 +276,45 @@
     <h3 class="section-title">Get in Touch</h3>
     <p class="section-description">Fill out the form below and we'll get back to you as soon as possible.</p>
     
-    <!-- Contact Form -->
-    <form id="contactForm" action="process-contact-form.php" method="post">
+    <form action="https://formspree.io/f/xkgojzkk" method="POST" id="contactForm">
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
         
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
         
         <label for="message">Your Message</label>
         <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea>
         
         <button type="submit">Send Message</button>
     </form>
-
-    <!-- Success/Error Feedback Message (Optional) -->
-    <div id="formFeedback" class="success-message" style="display:none;">
-        <p>Your message has been sent successfully!</p>
-    </div>
-    <div id="formFeedbackError" class="error-message" style="display:none;">
-        <p>There was an error sending your message. Please try again later.</p>
-    </div>
 </section>
 
-<section class="contact-details container">
-    <h3>Contact Information</h3>
-    <div class="table-container">
-        <table>
-            <caption>Contact Details</caption>
-            <thead>
-                <tr>
-                    <th>Department</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>General Inquiries</td>
-                    <td><a href="mailto:info@rocvillefm.com">info@rocvillefm.com</a></td>
-                    <td>(123) 456-7890</td>
-                </tr>
-                <tr>
-                    <td>Advertising</td>
-                    <td><a href="mailto:ads@rocvillefm.com">ads@rocvillefm.com</a></td>
-                    <td>(123) 555-7890</td>
-                </tr>
-                <tr>
-                    <td>Support</td>
-                    <td><a href="mailto:support@rocvillefm.com">support@rocvillefm.com</a></td>
-                    <td>(123) 666-7890</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<section class="content-section contact-details">
+    <h3>Contact Details</h3>
+    <table class="contact-details-table">
+        <tr>
+            <th>Email</th>
+            <td>info@rocvillefm.com</td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td>+27 12 345 6789</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>123 RocVille Street, Johannesburg, South Africa</td>
+        </tr>
+    </table>
 </section>
 
-<footer class="container">
-    <p>&copy; 2025 RocVille FM. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+<footer>
+    <p>&copy; 2025 RocVille FM. All Rights Reserved.</p>
+    <p>
+        <a href="https://facebook.com/rocvillefm" target="_blank">Facebook</a> | 
+        <a href="https://twitter.com/rocvillefm" target="_blank">Twitter</a> | 
+        <a href="https://instagram.com/rocvillefm" target="_blank">Instagram</a>
+    </p>
 </footer>
 
 </body>

@@ -101,6 +101,39 @@ document.addEventListener("DOMContentLoaded", function() {
         const re = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,6}$/;
         return re.test(String(email).toLowerCase());
     }
+
+    // Poll and survey sidebar functionality
+    const sidebar = document.querySelector('.sidebar');
+    const pollButton = document.querySelector('#pollButton');
+    const pollCloseButton = document.querySelector('#pollCloseButton');
+
+    if (pollButton) {
+        pollButton.addEventListener('click', () => {
+            sidebar.classList.add('active');  // Show sidebar when button is clicked
+        });
+    }
+
+    if (pollCloseButton) {
+        pollCloseButton.addEventListener('click', () => {
+            sidebar.classList.remove('active');  // Hide sidebar when close button is clicked
+        });
+    }
+
+    // Submit poll/survey results
+    const pollForm = document.querySelector('.sidebar form');
+    if (pollForm) {
+        pollForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedOption = pollForm.querySelector('input[type="radio"]:checked');
+            if (selectedOption) {
+                console.log("Poll submitted: " + selectedOption.value); // Simulate poll submission
+                alert('Thank you for voting!');
+                sidebar.classList.remove('active'); // Hide sidebar after submission
+            } else {
+                alert('Please select an option!');
+            }
+        });
+    }
 });
 
 // Countdown timer logic

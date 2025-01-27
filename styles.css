@@ -16,10 +16,8 @@ body {
 /* Header */
 header {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    padding: 20px 40px;
+    padding: 15px 30px; /* Reduced padding */
     background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
     border-radius: 10px;
     margin-bottom: 20px;
@@ -29,14 +27,14 @@ header {
 
 /* Header Title - Animated & Edgy */
 header h1 {
-    font-size: 2.5em;
+    font-size: 1.5em; /* Reduced font size */
     color: white;
     font-family: 'Bangers', sans-serif;
-    flex-grow: 1;
     font-weight: 700;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     animation: slideIn 2s ease-out;
+    margin-top: 0; /* Move the title to the top */
 }
 
 /* Keyframe for Title Animation */
@@ -56,7 +54,7 @@ header .logo-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
+    width: 15%; /* Reduced width */
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -205,6 +203,52 @@ footer a:hover {
     text-decoration: underline;
     color: #FFBBDF;
     transition: color 0.3s ease;
+}
+
+/* Sidebar Poll & Survey */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: none; /* Sidebar hidden initially */
+    z-index: 9999;
+}
+
+.sidebar.active {
+    display: block; /* Show sidebar when active */
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.sidebar .poll {
+    margin-bottom: 20px;
+}
+
+.sidebar .poll input {
+    margin-right: 10px;
+}
+
+.sidebar button {
+    background-color: #EB3C7C;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #FFBBDF;
 }
 
 /* Contact Details Section Update */

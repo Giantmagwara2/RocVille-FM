@@ -31,7 +31,6 @@
         <li><a href="advertising.html" class="active">Advertising</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="schedule.html">Schedule</a></li>
-        <!-- New links for login and register pages -->
         <li><a href="login.html">Login</a></li>
         <li><a href="register.html">Register</a></li>
     </ul>
@@ -68,8 +67,8 @@
     <h3 class="section-title">Get in Touch</h3>
     <p class="section-description">Ready to get started? Contact us now to learn more about our advertising options and find the perfect package for your brand!</p>
     
-    <!-- Advertising Inquiry Form -->
-    <form action="advertising-form.php" method="POST" class="advertising-form">
+    <!-- Advertising Inquiry Form (linked to Formspree) -->
+    <form action="https://formspree.io/f/mwkyoyrr" method="POST" class="advertising-form">
         <label for="companyName">Company Name:</label>
         <input type="text" name="companyName" id="companyName" placeholder="Your Company Name" required>
 
@@ -90,9 +89,82 @@
 
 </section>
 
+<!-- Polls/Surveys Sidebar -->
+<aside class="sidebar">
+    <h3>Poll of the Week</h3>
+    <div class="poll-container">
+        <p>What's your favorite music genre?</p>
+        <form id="pollForm">
+            <input type="radio" id="rock" name="genre" value="Rock">
+            <label for="rock">Rock</label><br>
+            <input type="radio" id="pop" name="genre" value="Pop">
+            <label for="pop">Pop</label><br>
+            <input type="radio" id="jazz" name="genre" value="Jazz">
+            <label for="jazz">Jazz</label><br>
+            <input type="radio" id="hiphop" name="genre" value="Hip-hop">
+            <label for="hiphop">Hip-hop</label><br>
+            <button type="submit">Vote</button>
+        </form>
+    </div>
+
+    <h3>Survey: How Are We Doing?</h3>
+    <div class="survey-container">
+        <p>Give us your feedback to help improve our shows!</p>
+        <form id="surveyForm">
+            <textarea placeholder="Your comments..." required></textarea><br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</aside>
+
 <footer>
     <p>&copy; 2025 RocVille FM. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
 </footer>
+
+<style>
+    /* Sidebar for Polls and Surveys */
+    .sidebar {
+        width: 300px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .sidebar h3 {
+        font-size: 1.5em;
+        color: #0099FF;
+    }
+
+    .poll-container, .survey-container {
+        margin-top: 20px;
+    }
+
+    .poll-container form, .survey-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .poll-container input[type="radio"], .survey-container textarea {
+        margin-left: 10px;
+    }
+
+    .poll-container button, .survey-container button {
+        background-color: #0099FF;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .poll-container button:hover, .survey-container button:hover {
+        background-color: #0077cc;
+    }
+</style>
 
 </body>
 </html>

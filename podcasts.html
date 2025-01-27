@@ -10,6 +10,40 @@
     <title>RocVille FM - Podcasts</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
+    <style>
+        /* Default state for the sidebar (hidden) */
+        .sidebar {
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            z-index: 1000;
+        }
+
+        .sidebar-toggle-btn {
+            position: fixed;
+            right: 0;
+            top: 20px;
+            background: #ff5733; /* Red button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1001;
+        }
+
+        /* Button styling when sidebar is open */
+        .sidebar.open {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -50,7 +84,7 @@
         <div class="podcast-card">
             <h4>Episode 1: Music Mania</h4>
             <p>A deep dive into the latest music trends, reviews, and interviews with top artists.</p>
-            <a href="podcast-1.html" class="podcast-link">Listen Now</a>
+            <a href="https://hearthis.at/backyardgrooves/jazz-gardenunlucky-observer-bakyard-grooves/" class="podcast-link" target="_blank">Listen Now</a>
         </div>
         <div class="podcast-card">
             <h4>Episode 2: The Talk Show</h4>
@@ -91,15 +125,43 @@
 <section class="content-section">
     <h3 class="section-title">Subscribe to Our Newsletter</h3>
     <p class="section-description">Stay updated with the latest episodes and news from RocVille FM.</p>
-    <form action="subscribe.php" method="post">
+    <form action="https://formspree.io/f/xkgojzkk" method="POST">
         <input type="email" name="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
     </form>
 </section>
 
+<!-- Poll and Survey Sidebar Integration -->
+<aside class="sidebar">
+    <h3>We Value Your Opinion</h3>
+    <p>Help us improve by answering a quick survey:</p>
+    <div class="poll">
+        <form action="https://formspree.io/f/xkgojzkk" method="POST">
+            <label for="survey-question">What's your favorite podcast genre?</label><br>
+            <input type="radio" id="music" name="genre" value="Music">
+            <label for="music">Music</label><br>
+            <input type="radio" id="talk" name="genre" value="Talk">
+            <label for="talk">Talk Shows</label><br>
+            <input type="radio" id="interviews" name="genre" value="Interviews">
+            <label for="interviews">Interviews</label><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</aside>
+
+<!-- Sidebar Toggle Button -->
+<button class="sidebar-toggle-btn" onclick="toggleSidebar()">☰</button>
+
 <footer>
     <p>&copy; 2025 RocVille FM. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
 </footer>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('open');
+    }
+</script>
 
 </body>
 </html>

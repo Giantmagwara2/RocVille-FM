@@ -1,0 +1,199 @@
+/* Basic Styles for the Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #1d3d6d, #EB3C7C);
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Sidebar and Layout Styles */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    padding-left: 20px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ccc;
+}
+
+.sidebar section {
+    margin-bottom: 20px;
+}
+
+/* Poll and Survey Containers */
+.poll-container, .survey-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poll-container h3, .survey-container h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.poll-container p, .survey-container p {
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+button {
+    background-color: #FF5733; /* Vibrant red button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c13f22; /* Darker red on hover */
+}
+
+/* Poll Form Button */
+button[type="submit"] {
+    background-color: #EB3C7C;
+}
+
+button[type="submit"]:hover {
+    background-color: #FFBBDF;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Poll and Survey Form Layout */
+#poll-form {
+    margin-top: 20px;
+}
+
+#poll-results {
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Toggle Sidebar Button */
+#toggleSidebarBtn {
+    background-color: #0099FF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#toggleSidebarBtn:hover {
+    background-color: #0077cc;
+}
+
+/* Poll Container */
+.poll-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Social Media Icons */
+.social-media .social-icons a {
+    margin-right: 10px;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-media .social-icons a:hover {
+    color: #EB3C7C;
+}
+
+/* Featured Shows Section */
+.featured-shows .show-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.show-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.show-card h4 {
+    font-size: 1.2em;
+}
+
+.show-card p {
+    margin: 10px 0;
+}
+
+.show-card .button {
+    background-color: #EB3C7C;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.show-card .button:hover {
+    background-color: #FFBBDF;
+}
+
+/* Contact Form */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #EB3C7C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #FFBBDF;
+}

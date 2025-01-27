@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polls & Surveys</title>
+    <link rel="stylesheet" href="polls.css">
+</head>
+<body>
+    <header>
+        <h1>Vote in Our Poll</h1>
+    </header>
+    <main>
+        <section class="poll-container">
+            <h2>Which genre of music do you prefer?</h2>
+            <form id="poll-form">
+                <label>
+                    <input type="radio" name="poll-option" value="Rock"> Rock
+                </label><br>
+                <label>
+                    <input type="radio" name="poll-option" value="Pop"> Pop
+                </label><br>
+                <label>
+                    <input type="radio" name="poll-option" value="Jazz"> Jazz
+                </label><br>
+                <label>
+                    <input type="radio" name="poll-option" value="Hip-hop"> Hip-hop
+                </label><br>
+                <label>
+                    <input type="radio" name="poll-option" value="Classical"> Classical
+                </label><br>
+                <button type="submit" id="submit-vote">Submit Vote</button>
+            </form>
+        </section>
+        <section id="poll-results" class="hidden">
+            <h2>Poll Results</h2>
+            <ul id="results-list"></ul>
+        </section>
+    </main>
+
+    <script src="polls.js"></script>
+</body>
+</html>
