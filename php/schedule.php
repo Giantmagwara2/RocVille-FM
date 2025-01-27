@@ -1,3 +1,7 @@
+<?php
+    // Include session check to ensure the user is authorized to view this page
+    include('session_check.php');
+?>
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -31,17 +35,18 @@
         <li><a href="advertising.php">Advertising</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="schedule.php" class="active">Schedule</a></li>
+        <!-- New links for login and register pages -->
         <li><a href="login.php">Login</a></li>
         <li><a href="register.php">Register</a></li>
     </ul>
 </nav>
 
-<section class="hero-section">
+<section class="hero-section" style="padding: 40px;">
     <h2>Show Schedule</h2>
     <p>Check out our live programming schedule and never miss your favorite shows!</p>
 </section>
 
-<section class="content-section">
+<section class="content-section" style="padding: 40px;">
     <h3 class="section-title">Daily Programming</h3>
     <p class="section-description">Our programming is packed with exciting shows every day. Here's what you can expect:</p>
     
@@ -74,12 +79,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2025 RocVille FM. All rights reserved. | 
-        <a href="privacy-policy.php">Privacy Policy</a> | 
-        <a href="terms-conditions.php">Terms & Conditions</a> | 
-        <a href="login.php">Login</a> | 
-        <a href="register.php">Register</a>
-    </p>
+    <p>&copy; 2025 RocVille FM. All rights reserved. | <a href="privacy-policy.php">Privacy Policy</a> | <a href="terms-conditions.php">Terms & Conditions</a></p>
 </footer>
 
 </body>

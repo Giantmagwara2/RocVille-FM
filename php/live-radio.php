@@ -1,3 +1,15 @@
+<?php 
+// session_check.php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page if not logged in
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,16 +64,12 @@
 <section class="live-radio">
     <h3 class="section-title">Live Radio Streaming</h3>
     <p class="section-description">Listen to our live broadcast and enjoy non-stop music, talk shows, and entertainment!</p>
-    
-    <!-- Audio Player Container -->
-    <div class="audio-player-container">
-        <!-- Audio Player (hidden) -->
-        <audio id="audioPlayer" src="https://your-live-radio-stream-url" preload="auto"></audio>
-
-        <!-- Play/Pause Button -->
-        <button id="playPauseBtn">Play</button>
+    <div class="audio-player">
+        <audio controls>
+            <source src="stream-url.mp3" type="audio/mp3">
+            <!-- Add actual streaming URL -->
+        </audio>
     </div>
-
     <div class="show-details">
         <h4>Current Show: Morning Vibes</h4>
         <p>Start your day with uplifting music and inspiring stories.</p>
@@ -169,31 +177,6 @@
 
     .show-card p {
         font-size: 1em;
-    }
-
-    /* Audio Player Container */
-    .audio-player-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
-    }
-
-    /* Play/Pause Button */
-    #playPauseBtn {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #0099FF;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-left: 10px;
-        transition: background-color 0.3s ease;
-    }
-
-    #playPauseBtn:hover {
-        background-color: #0077cc;
     }
 </style>
 

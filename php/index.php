@@ -1,3 +1,5 @@
+<?php include('session_check.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,7 @@
 
 <header>
     <div class="logo-container">
-        <a href="index.html" class="logo-link">
+        <a href="index.php" class="logo-link">
             <img src="images/logo.png" alt="RocVille FM Logo" class="logo">
         </a>
         <h1>RocVille FM</h1>
@@ -25,16 +27,16 @@
 
 <nav>
     <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="live-radio.html">Live Radio</a></li>
-        <li><a href="podcasts.html">Podcasts</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="advertising.html">Advertising</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="index.php" class="active">Home</a></li>
+        <li><a href="live-radio.php">Live Radio</a></li>
+        <li><a href="podcasts.php">Podcasts</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="advertising.php">Advertising</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="schedule.php">Schedule</a></li>
         <!-- New Links to Register and Login Pages -->
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="register.php">Register</a></li>
+        <li><a href="login.php">Login</a></li>
     </ul>
 </nav>
 
@@ -145,4 +147,9 @@
         <h3>Follow Us</h3>
         <a href="https://facebook.com/RocVilleFM" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://twitter.com/RocVilleFM" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/RocVilleFM" target="_blank"><i class
+        <a href="https://instagram.com/RocVilleFM" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>

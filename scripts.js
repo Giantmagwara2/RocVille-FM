@@ -26,18 +26,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Play/Pause button functionality for live stream
     const playPauseBtn = document.getElementById('playPauseBtn');
+    const audioPlayer = document.getElementById('audioPlayer'); // Audio player reference
     let isPlaying = false;
 
     if (playPauseBtn) {
         playPauseBtn.addEventListener('click', function() {
             isPlaying = !isPlaying;
+
             if (isPlaying) {
-                playPauseBtn.textContent = "Pause";
-                // Add your audio playing functionality here (e.g., play the audio)
+                audioPlayer.play();  // Play the audio stream
+                playPauseBtn.textContent = "Pause";  // Update button text
                 console.log("Playing audio...");
             } else {
-                playPauseBtn.textContent = "Play";
-                // Add your audio pausing functionality here (e.g., pause the audio)
+                audioPlayer.pause();  // Pause the audio stream
+                playPauseBtn.textContent = "Play";  // Update button text
                 console.log("Pausing audio...");
             }
         });
@@ -96,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Helper function to validate email format
     function validateEmail(email) {
-        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const re = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,6}$/;
         return re.test(String(email).toLowerCase());
     }
 });
@@ -122,12 +124,21 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
-if (isValid) {
-    // Simulate form submission for now
-    document.getElementById('formFeedback').style.display = 'block';
-    document.getElementById('formFeedback').innerHTML = 'Thank you for your message! We will get back to you soon.';
-    form.reset(); // Reset form after submission
-} else {
-    document.getElementById('formFeedback').style.display = 'block';
-    document.getElementById('formFeedback').innerHTML = 'Please fill in all required fields correctly.';
+
+// Simulate form submission for now
+function simulateFormSubmission() {
+    const form = document.getElementById('contactForm');
+    const isValid = form.checkValidity();
+
+    if (isValid) {
+        document.getElementById('formFeedback').style.display = 'block';
+        document.getElementById('formFeedback').innerHTML = 'Thank you for your message! We will get back to you soon.';
+        form.reset(); // Reset form after submission
+    } else {
+        document.getElementById('formFeedback').style.display = 'block';
+        document.getElementById('formFeedback').innerHTML = 'Please fill in all required fields correctly.';
+    }
 }
+
+// Attach the form submission simulation to the submit button
+document.getElementById('contactForm').addEventListener('submit', simulateFormSubmission);

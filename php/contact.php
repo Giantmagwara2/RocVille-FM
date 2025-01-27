@@ -1,3 +1,4 @@
+<?php include('session_check.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <meta property="og:title" content="Contact | RocVille FM">
     <meta property="og:description" content="Get in touch with RocVille FM for any inquiries, support, or feedback.">
     <meta property="og:image" content="images/social-media-thumbnail.jpg">
-    <meta property="og:url" content="https://rocvillefm.com/contact.html">
+    <meta property="og:url" content="https://rocvillefm.com/contact.php">
     <title>RocVille FM - Contact</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
@@ -24,15 +25,15 @@
 
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="live-radio.html">Live Radio</a></li>
-        <li><a href="podcasts.html">Podcasts</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="advertising.html">Advertising</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="live-radio.php">Live Radio</a></li>
+        <li><a href="podcasts.php">Podcasts</a></li>
+        <li><a href="contact.php" class="active">Contact</a></li>
+        <li><a href="advertising.php">Advertising</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="schedule.php">Schedule</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="register.php">Register</a></li>
     </ul>
 </nav>
 
@@ -102,7 +103,7 @@
 </section>
 
 <footer class="container">
-    <p>&copy; 2025 RocVille FM. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+    <p>&copy; 2025 RocVille FM. All rights reserved. | <a href="privacy-policy.php">Privacy Policy</a> | <a href="terms-conditions.php">Terms & Conditions</a></p>
 </footer>
 
 </body>

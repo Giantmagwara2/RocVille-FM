@@ -1,0 +1,8 @@
+CREATE TABLE event_registrations (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  event_name VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  tickets INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
